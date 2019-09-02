@@ -1,0 +1,939 @@
+array(2) {
+  ["result"]=>
+  array(53) {
+    ["ID"]=>
+    array(7) {
+      ["type"]=>
+      string(7) "integer"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(true)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(2) "ID"
+    }
+    ["TITLE"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(true)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(33) "Название компании"
+    }
+    ["COMPANY_TYPE"]=>
+    array(8) {
+      ["type"]=>
+      string(10) "crm_status"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["statusType"]=>
+      string(12) "COMPANY_TYPE"
+      ["title"]=>
+      string(23) "Тип компании"
+    }
+    ["LOGO"]=>
+    array(7) {
+      ["type"]=>
+      string(4) "file"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(14) "Логотип"
+    }
+    ["ADDRESS"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(33) "Фактический адрес"
+    }
+    ["ADDRESS_2"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(22) "Адрес (стр. 2)"
+    }
+    ["ADDRESS_CITY"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(10) "Город"
+    }
+    ["ADDRESS_POSTAL_CODE"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(29) "Почтовый индекс"
+    }
+    ["ADDRESS_REGION"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(10) "Район"
+    }
+    ["ADDRESS_PROVINCE"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(14) "Область"
+    }
+    ["ADDRESS_COUNTRY"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(12) "Страна"
+    }
+    ["ADDRESS_COUNTRY_CODE"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(19) "Код страны"
+    }
+    ["ADDRESS_LEGAL"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(33) "Юридический адрес"
+    }
+    ["REG_ADDRESS"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(33) "Юридический адрес"
+    }
+    ["REG_ADDRESS_2"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(45) "Юридический адрес (стр. 2)"
+    }
+    ["REG_ADDRESS_CITY"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(44) "Юридический адрес город"
+    }
+    ["REG_ADDRESS_POSTAL_CODE"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(64) "Юридический адрес почтовый индекс "
+    }
+    ["REG_ADDRESS_REGION"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(44) "Юридический адрес район"
+    }
+    ["REG_ADDRESS_PROVINCE"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(48) "Юридический адрес область"
+    }
+    ["REG_ADDRESS_COUNTRY"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(46) "Юридический адрес страна"
+    }
+    ["REG_ADDRESS_COUNTRY_CODE"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(53) "Юридический адрес код страны"
+    }
+    ["BANKING_DETAILS"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(39) "Банковские реквизиты"
+    }
+    ["INDUSTRY"]=>
+    array(8) {
+      ["type"]=>
+      string(10) "crm_status"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["statusType"]=>
+      string(8) "INDUSTRY"
+      ["title"]=>
+      string(35) "Сфера деятельности"
+    }
+    ["EMPLOYEES"]=>
+    array(8) {
+      ["type"]=>
+      string(10) "crm_status"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["statusType"]=>
+      string(9) "EMPLOYEES"
+      ["title"]=>
+      string(34) "Кол-во сотрудников"
+    }
+    ["CURRENCY_ID"]=>
+    array(7) {
+      ["type"]=>
+      string(12) "crm_currency"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(12) "Валюта"
+    }
+    ["REVENUE"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "double"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(27) "Годовой оборот"
+    }
+    ["OPENED"]=>
+    array(7) {
+      ["type"]=>
+      string(4) "char"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(32) "Доступна для всех"
+    }
+    ["COMMENTS"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(22) "Комментарий"
+    }
+    ["HAS_PHONE"]=>
+    array(7) {
+      ["type"]=>
+      string(4) "char"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(true)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(25) "Задан телефон"
+    }
+    ["HAS_EMAIL"]=>
+    array(7) {
+      ["type"]=>
+      string(4) "char"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(true)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(17) "Задан e-mail"
+    }
+    ["HAS_IMOL"]=>
+    array(7) {
+      ["type"]=>
+      string(4) "char"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(true)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(40) "Задана открытая линия"
+    }
+    ["IS_MY_COMPANY"]=>
+    array(7) {
+      ["type"]=>
+      string(4) "char"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(23) "Моя компания"
+    }
+    ["ASSIGNED_BY_ID"]=>
+    array(7) {
+      ["type"]=>
+      string(4) "user"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(26) "Ответственный"
+    }
+    ["CREATED_BY_ID"]=>
+    array(7) {
+      ["type"]=>
+      string(4) "user"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(true)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(21) "Кем создана"
+    }
+    ["MODIFY_BY_ID"]=>
+    array(7) {
+      ["type"]=>
+      string(4) "user"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(true)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(23) "Кем изменена"
+    }
+    ["DATE_CREATE"]=>
+    array(7) {
+      ["type"]=>
+      string(8) "datetime"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(true)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(25) "Дата создания"
+    }
+    ["DATE_MODIFY"]=>
+    array(7) {
+      ["type"]=>
+      string(8) "datetime"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(true)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(27) "Дата изменения"
+    }
+    ["CONTACT_ID"]=>
+    array(7) {
+      ["type"]=>
+      string(11) "crm_contact"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(true)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(14) "Контакт"
+    }
+    ["LEAD_ID"]=>
+    array(7) {
+      ["type"]=>
+      string(8) "crm_lead"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(true)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(6) "Лид"
+    }
+    ["ORIGINATOR_ID"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(31) "Внешний источник"
+    }
+    ["ORIGIN_ID"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(82) "Идентификатор элемента во внешнем источнике"
+    }
+    ["ORIGIN_VERSION"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(31) "Версия оригинала"
+    }
+    ["UTM_SOURCE"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(33) "Рекламная система"
+    }
+    ["UTM_MEDIUM"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(21) "Тип трафика"
+    }
+    ["UTM_CAMPAIGN"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(58) "Обозначение рекламной кампании"
+    }
+    ["UTM_CONTENT"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(37) "Содержание кампании"
+    }
+    ["UTM_TERM"]=>
+    array(7) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(44) "Условие поиска кампании"
+    }
+    ["PHONE"]=>
+    array(7) {
+      ["type"]=>
+      string(14) "crm_multifield"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(true)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(14) "Телефон"
+    }
+    ["EMAIL"]=>
+    array(7) {
+      ["type"]=>
+      string(14) "crm_multifield"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(true)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(6) "E-mail"
+    }
+    ["WEB"]=>
+    array(7) {
+      ["type"]=>
+      string(14) "crm_multifield"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(true)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(8) "Сайт"
+    }
+    ["IM"]=>
+    array(7) {
+      ["type"]=>
+      string(14) "crm_multifield"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(true)
+      ["isDynamic"]=>
+      bool(false)
+      ["title"]=>
+      string(20) "Мессенджер"
+    }
+    ["UF_CRM_1567188008193"]=>
+    array(10) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(true)
+      ["title"]=>
+      string(20) "UF_CRM_1567188008193"
+      ["listLabel"]=>
+      string(19) "Новое поле"
+      ["formLabel"]=>
+      string(19) "Новое поле"
+      ["filterLabel"]=>
+      string(19) "Новое поле"
+    }
+    ["UF_CRM_1567447234493"]=>
+    array(10) {
+      ["type"]=>
+      string(6) "string"
+      ["isRequired"]=>
+      bool(false)
+      ["isReadOnly"]=>
+      bool(false)
+      ["isImmutable"]=>
+      bool(false)
+      ["isMultiple"]=>
+      bool(false)
+      ["isDynamic"]=>
+      bool(true)
+      ["title"]=>
+      string(20) "UF_CRM_1567447234493"
+      ["listLabel"]=>
+      string(7) "ADDRESS"
+      ["formLabel"]=>
+      string(7) "ADDRESS"
+      ["filterLabel"]=>
+      string(0) ""
+    }
+  }
+  ["time"]=>
+  array(6) {
+    ["start"]=>
+    float(1567447255.0954)
+    ["finish"]=>
+    float(1567447255.1732)
+    ["duration"]=>
+    float(0.077831983566284)
+    ["processing"]=>
+    float(0.0048708915710449)
+    ["date_start"]=>
+    string(25) "2019-09-02T21:00:55+03:00"
+    ["date_finish"]=>
+    string(25) "2019-09-02T21:00:55+03:00"
+  }
+}
