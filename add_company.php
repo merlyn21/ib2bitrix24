@@ -1,6 +1,6 @@
 <?
 
-function add_real($company, $contacts){
+function add_real($company, $contacts, $history){
 
     $queryUrl = 'https://server1/rest/1/y6yh3tmvacwpjb93/crm.company.add.json';
 
@@ -44,7 +44,6 @@ function add_real($company, $contacts){
     var_dump($result);
 	echo "\n id: ".$companyID."\n";
 	
-	var_dump($contacts);
 	
 	for($i = 0;$i < count($contacts);$i++){
 		
@@ -119,6 +118,46 @@ function add_real($company, $contacts){
 	
 	}
 	
+	
+	
+	//Добавляем сделку
+	
+	
+	for($i = 0;$i < count($history);$i++){
+		
+		$queryUrl3 = 'https://server1/rest/1/y6yh3tmvacwpjb93/crm.deal.add.json';
+		$qr3 = array(
+			'fields' => array(),
+			'params' => array("REGISTER_SONET_EVENT" => "Y")
+		);
+		$qr3['fields']['TITLE'] = $history[$i]["note"]; // Название лида  
+		$qr3['fields']['COMPANY_ID'] = $companyID;
+		$qr3['fields']['CLOSED'] = 1;
+		//$qr3['fields']['OPPORTUNITY'] = '1';
+	   
+		$queryData3 = http_build_query($qr3);
+	 
+		$curl3 = curl_init();
+		curl_setopt_array($curl3, array(
+			CURLOPT_SSL_VERIFYPEER => 0,
+			CURLOPT_SSL_VERIFYHOST => FALSE,
+			CURLOPT_POST => 1,
+			CURLOPT_HEADER => 0,
+			CURLOPT_RETURNTRANSFER => 1,
+			CURLOPT_URL => $queryUrl3,
+			CURLOPT_POSTFIELDS => $queryData3,
+		));
+	 
+		if(!$result3 = curl_exec($curl3))
+		{
+			$result3 = curl_error($curl3);
+		}
+		curl_close($curl3);
+	 
+		$result3 = json_decode($result3, true);
+		$dealID = $result3["result"];
+		var_dump($result3);
+	}
 	
 	
 }
