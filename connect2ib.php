@@ -27,12 +27,12 @@ while ($row = ibase_fetch_row($sth)) {
 	$contacts = array();
 	while ($row_c = ibase_fetch_row($s_cont)) {
 			//echo "---- ".iconv("CP1251","UTF-8",$row_c[0])." ".iconv("CP1251","UTF-8",$row_c[2])."  ".iconv("CP1251","UTF-8",$row_c[3])."    ".iconv("CP1251","UTF-8",$row_c[4])."\n";
-			$contacts[$i]["name"] = trim($row_c[0]);
-			$contacts[$i]["title"] = trim($row_c[1]);
-			$contacts[$i]["dep"] = trim($row_c[2]);
-			$contacts[$i]["phone"] = trim($row_c[3]);
-			$contacts[$i]["email"] = trim($row_c[4]);
-			$contacts[$i]["datecr"] = trim($row_c[5]);
+			$contacts[$i]["name"] = trim(iconv("CP1251","UTF-8",$row_c[0]));
+			$contacts[$i]["title"] = trim(iconv("CP1251","UTF-8",$row_c[1]));
+			$contacts[$i]["dep"] = trim(iconv("CP1251","UTF-8",$row_c[2]));
+			$contacts[$i]["phone"] = trim(iconv("CP1251","UTF-8",$row_c[3]));
+			$contacts[$i]["email"] = trim(iconv("CP1251","UTF-8",$row_c[4]));
+			$contacts[$i]["datecr"] = trim(iconv("CP1251","UTF-8",$row_c[5]));
 			
 			$i++;
 		

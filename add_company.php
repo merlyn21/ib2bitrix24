@@ -58,7 +58,7 @@ function add_real($company, $contacts, $history){
 		//$qr['fields']['SECOND_NAME'] = 'Егорович';
 		//$qr['fields']['LAST_NAME'] = 'Титов';
 		$qr1['fields']['OPENED'] = 'Y'; //открыто для других пользователей
-		//$qr['fields']['ASSIGNED_BY_ID'] = 1; //id ответственного менеджера
+		$qr1['fields']['POST'] = $contacts[$i]["title"]; 
 		$qr1['fields']['PHONE']['n1'] = array("VALUE"=>$contacts[$i]["phone"], "VALUE_TYPE"=>"WORK");
 		$qr1['fields']['EMAIL']['n1'] = array("VALUE"=>$contacts[$i]["email"], "VALUE_TYPE"=>"WORK");
 	 
@@ -125,15 +125,22 @@ function add_real($company, $contacts, $history){
 	
 	for($i = 0;$i < count($history);$i++){
 		
-		$queryUrl3 = 'https://server1/rest/1/y6yh3tmvacwpjb93/crm.deal.add.json';
+		$queryUrl3 = 'https://server1/rest/1/y6yh3tmvacwpjb93/crm.quote.add.json';
 		$qr3 = array(
 			'fields' => array(),
 			'params' => array("REGISTER_SONET_EVENT" => "Y")
 		);
 		$qr3['fields']['TITLE'] = $history[$i]["note"]; // Название лида  
 		$qr3['fields']['COMPANY_ID'] = $companyID;
-		$qr3['fields']['CLOSED'] = 1;
+		$qr3['fields']['STATUS_ID'] = "DRAFT";
+		$qr3['fields']['OPENED'] = "Y";
+		$qr3['fields']['CLOSED'] = "Y";
+		$qr3['fields']['BEGINDATE'] = date(DATE_ISO8601, strtotime($history[$i]["datecr"]));
+		$qr3['fields']['CLOSEDATE'] = date(DATE_ISO8601, strtotime($history[$i]["datecr"]));
+		$qr3['fields']['COMMENTS'] = $history[$i]["user"];
 		//$qr3['fields']['OPPORTUNITY'] = '1';
+	   
+	   echo " ----- ".$qr3['fields']['CLOSED']."\n";
 	   
 		$queryData3 = http_build_query($qr3);
 	 
