@@ -1,9 +1,15 @@
 <?
-$queryUrl = 'https://server1/rest/1/y6yh3tmvacwpjb93/crm.company.fields.json';
+//$queryUrl = 'https://server1/rest/1/y6yh3tmvacwpjb93/crm.company.fields.json';
 
    
 //    $queryData = http_build_query($qr);
  
+
+
+
+function get_fields($metod){ 
+
+	$queryUrl = "https://server1/rest/1/y6yh3tmvacwpjb93/".$metod;
     $curl = curl_init();
     curl_setopt_array($curl, array(
         CURLOPT_SSL_VERIFYPEER => 0,
@@ -24,6 +30,11 @@ $queryUrl = 'https://server1/rest/1/y6yh3tmvacwpjb93/crm.company.fields.json';
     $result = json_decode($result, true);
 //    $dealID = $result["result"];
     var_dump($result);
+}
+
+
+//get_fields('crm.company.fields.json');
+get_fields('crm.quote.fields.json');
 
 
 ?>

@@ -1,13 +1,19 @@
 <?php
 //ini_set('display_errors','On');
 //error_reporting('E_ALL');
+$ini = parse_ini_file('config');
 require_once __DIR__ . '/add_company.php';
 
+$srv_ib =  $ini['srv_ib'];
+
+//$srv_ib = "192.168.220.130:c:\at\quicksales.gdb";
 echo "Hello\n\n";
 
-$dbh = ibase_connect("192.168.220.130:c:\at\quicksales.gdb", "SYSDBA", "masterkey");
+$dbh = ibase_connect($srv_ib, "SYSDBA", "masterkey");
 $stmt = 'SELECT customer.idcust, customer.iduser, customer.company, users.name, customer.fax, customer.address, customer.city FROM customer,users where customer.iduser=users.iduser';
 $sth = ibase_query($dbh, $stmt);
+$count = 0;
+
 while ($row = ibase_fetch_row($sth)) {
 	$cust = $row[0];
 	$user = $row[1];
@@ -55,7 +61,16 @@ while ($row = ibase_fetch_row($sth)) {
 	}	
 	ibase_free_result($q_hist);
 	
-	add_test($customer, $contacts, $history);
+	//add_test($customer, $contacts, $history);
+	add_real($customer, $contacts, $history);
+	
+	$count++;
+	if($count == 10){
+		ibase_free_result($sth);
+		ibase_close($dbh);	
+		exit("Exit!!!");
+		}
+	
 	echo "____________________________________________\n";
 	
 }

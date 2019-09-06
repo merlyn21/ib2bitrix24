@@ -1,11 +1,18 @@
 <?
 
+//require_once __DIR__ . '/config';
+$ini = parse_ini_file('config');
+
+$server =  $ini['server'];
+echo $server."\n";	
+
 function add_real($company, $contacts, $history){
 	
-	$server = "https://server1/rest/1/y6yh3tmvacwpjb93/";
-
+	//$server = "https://server1/rest/1/y6yh3tmvacwpjb93/";
+	global $server;
 
     $queryUrl = $server.'crm.company.add.json';
+	echo $queryUrl."\n";
 
     $qr = array(
         'fields' => array(),
