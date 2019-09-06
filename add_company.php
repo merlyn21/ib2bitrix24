@@ -1,8 +1,11 @@
 <?
 
 function add_real($company, $contacts, $history){
+	
+	$server = "https://server1/rest/1/y6yh3tmvacwpjb93/";
 
-    $queryUrl = 'https://server1/rest/1/y6yh3tmvacwpjb93/crm.company.add.json';
+
+    $queryUrl = $server.'crm.company.add.json';
 
     $qr = array(
         'fields' => array(),
@@ -45,11 +48,12 @@ function add_real($company, $contacts, $history){
 	echo "\n id: ".$companyID."\n";
 	
 	
+	$queryUrl1 = $server.'crm.contact.add.json';
 	for($i = 0;$i < count($contacts);$i++){
 		
 		echo "Contact   ".$contacts[$i]["name"]."\n";
 		
-		$queryUrl1 = 'https://server1/rest/1/y6yh3tmvacwpjb93/crm.contact.add.json';
+		
 		$qr1 = array(
 			'fields' => array(),
 			'params' => array()
@@ -87,7 +91,7 @@ function add_real($company, $contacts, $history){
 		
 		//добавляем контакт к компании
 		
-		$queryUrl2 = 'https://server1/rest/1/y6yh3tmvacwpjb93/crm.company.contact.add.json';
+		$queryUrl2 = $server.'crm.company.contact.add.json';
 		$qr2 = array(
 			'id' => $companyID,
 			'fields' => array()
@@ -122,10 +126,10 @@ function add_real($company, $contacts, $history){
 	
 	//Добавляем сделку
 	
-	
+	$queryUrl3 = $server.'crm.quote.add.json';
 	for($i = 0;$i < count($history);$i++){
 		
-		$queryUrl3 = 'https://server1/rest/1/y6yh3tmvacwpjb93/crm.quote.add.json';
+		
 		$qr3 = array(
 			'fields' => array(),
 			'params' => array("REGISTER_SONET_EVENT" => "Y")
