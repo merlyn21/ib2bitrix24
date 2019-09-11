@@ -4,15 +4,12 @@
 $ini = parse_ini_file('config');
 
 $server =  $ini['server'];
-$f_addr = (string)$ini['address'];
-
-echo $f_addr."\n";	
+echo $server."\n";	
 
 function add_real($company, $contacts, $history){
 	
 	//$server = "https://server1/rest/1/y6yh3tmvacwpjb93/";
 	global $server;
-	global $f_addr;
 
     $queryUrl = $server.'crm.company.add.json';
 	echo $queryUrl."\n";
@@ -25,7 +22,7 @@ function add_real($company, $contacts, $history){
 	
     $qr['fields']['TITLE'] = $company["name"]; // Название лида  
     $qr['fields']['COMPANY_TYPE'] = 'CUSTOMER';
-	$qr['fields'][$f_addr] = $company["address"];
+	$qr['fields']['UF_CRM_1567447234493'] = $company["address"];
 	//$qr['fields']['ADDRESS']["isRequired"];
     $qr['fields']['OPENED'] = 'Y';
 	// $phone["VALUE"] = $company["phone"];
@@ -134,27 +131,29 @@ function add_real($company, $contacts, $history){
 	
 	
 	
-	//Добавляем предложение
+	//Добавляем сделку
 	
-	$queryUrl3 = $server.'crm.quote.add.json';
+	$queryUrl3 = $server.'crm.company.update.json';
 	for($i = 0;$i < count($history);$i++){
 		
 		
 		$qr3 = array(
+			'id' => $companyID,
 			'fields' => array(),
-			'params' => array("REGISTER_SONET_EVENT" => "Y")
+			'params' => array()
+		
 		);
-		$qr3['fields']['TITLE'] = $history[$i]["note"]; // Название лида  
-		$qr3['fields']['COMPANY_ID'] = $companyID;
-		$qr3['fields']['STATUS_ID'] = "APPROVED";
-		//$qr3['OPENED'] = "Y";
-		$qr3['fields']['CLOSED'] = "Y";
-		$qr3['fields']['BEGINDATE'] = date(DATE_ISO8601, strtotime($history[$i]["datecr"]));
-		$qr3['fields']['CLOSEDATE'] = date(DATE_ISO8601, strtotime($history[$i]["datecr"]));
-		$qr3['fields']['COMMENTS'] = $history[$i]["user"];
+		//$qr3['ENTITYTYPEID'] = 4; // Название лида  
+		//$qr3['ENTITYID'] = $companyID;
+		//$qr3['EVENT_ID'] = "INFO";
+		$qr3['fields']['COMMENTS'] = $history[$i]["note"];
+		
+		//$qr3['BEGINDATE'] = date(DATE_ISO8601, strtotime($history[$i]["datecr"]));
+		//$qr3['CLOSEDATE'] = date(DATE_ISO8601, strtotime($history[$i]["datecr"]));
+		//$qr3['COMMENTS'] = $history[$i]["user"];
 		//$qr3['fields']['OPPORTUNITY'] = '1';
 	   
-	   //echo " ----- ".$qr3['fields']['CLOSED']."\n";
+	   echo " ----- \n";//.$qr3['CLOSED']."\n";
 	   
 		$queryData3 = http_build_query($qr3);
 	 

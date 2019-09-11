@@ -6,13 +6,13 @@ require_once __DIR__ . '/add_company.php';
 echo "Test\n\n";
 
 
-	$customer["name"] = "ООО Тarararara";
+	$customer["name"] = "ООО Тa2222";
 	$customer["user"] = "Иванова";
-	$customer["phone"] = "9125554444";
-	$customer["address"] = "г. Урюписк, ул. Ленина, д.100";
+	$customer["phone"] = "9232323232";
+	$customer["address"] = "г. Урюписк, ул. Ленина, д.224";
 
 	
-	$contacts[0]["name"] = "Сергей Сергеич петров";
+	$contacts[0]["name"] = "Сергей Сергеич петроввв";
 	$contacts[0]["title"] = "главный инженер";
 	$contacts[0]["dep"] = "снабжение";
 	$contacts[0]["phone"] = "(3452)  прием. 122-02296";
