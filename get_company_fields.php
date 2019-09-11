@@ -3,13 +3,17 @@
 
    
 //    $queryData = http_build_query($qr);
- 
+$ini = parse_ini_file('config');
+
+$server =  $ini['server'];
 
 
 
 function get_fields($metod){ 
 
-	$queryUrl = "https://server1/rest/1/y6yh3tmvacwpjb93/".$metod;
+	global $server;
+
+	$queryUrl = $server.$metod;
     $curl = curl_init();
     curl_setopt_array($curl, array(
         CURLOPT_SSL_VERIFYPEER => 0,
@@ -34,7 +38,9 @@ function get_fields($metod){
 
 function get_company($id){ 
 
-	$queryUrl = "https://server1/rest/1/y6yh3tmvacwpjb93/crm.company.get?id=".$id;
+	global $server;
+
+	$queryUrl = $server."crm.company.get?id=".$id;
     
 	
 
